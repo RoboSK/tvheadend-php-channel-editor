@@ -1,0 +1,11 @@
+// skusit ulozenie...ak je kodovane...funkca na zistenie ci pouzit aj dany kodovany kanal..
+
+skupiny programou
+
+casom skontrolovat ci nie je nejaka freq 9000 alebo su vsetky skutocne od 10000... -> $channel_scrambled_string = 'TS2020' . $matches[2] . '000' . '_' . strtoupper($matches[3]);
+
+pri vytvarani channels skontrolovat nazov stanice na pritomnost " ???
+
+
+// help /$frequency = $matches[2] . $matches[3] . '0000';/ -> // mb_substr($nick,0,($max_lenght - strlen($suffix)))
+
