@@ -179,6 +179,9 @@ $data = robin_file_read($config['file_channels_list']);
   for($i=0;$i<(count($line));$i++)
   {
 
+// skipp comments...
+if(preg_match('#^//#i',$line[$i])) continue;
+
 $tmp_ex = explode('#',$line[$i]);
 
 // check if exist channel name...

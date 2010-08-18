@@ -138,7 +138,7 @@ $use_scrambled = 0;
 
 
 
-$list_all_enabled_channel = analog_tv($list_all_enabled_channel);
+if($config['analog_tv'] === 1) $list_all_enabled_channel = analog_tv($list_all_enabled_channel);
 
 
         if($config['debug'] >= 3): 

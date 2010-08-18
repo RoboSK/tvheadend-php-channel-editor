@@ -1,0 +1,49 @@
+Channel editor for tvheadend written in php
+
+This script generate channel order from configuration file for Tvheadend and 
+"XBMC pvr-testing2" - tested with DVB-S/S2 and AnalogueTV Hauppauge PVR-500...
+
+you need edit:
+    _config_.php - help inside (edit only line with "EDIT -> ")
+    run.sh - help inside (edit only line with "EDIT -> ")
+
+
+
+    channels.txt - for all DVB-* - this file contain channel list with this stucture
+A#B#C
+A = channel ID; use number, or * for next empty ID, or "nothing" for next empty from last used ID
+B = channel name and(or) alias - use "|" as separator
+C = if is channel scrambled write "provider" or TP frequency and polarization
+
+example...
+
+1#JOJ|TV JOJ#Skylink
+3#JOJ +|JOJ PLUS#Skylink
+*#STV3#Skylink
+*#STV4#Skylink
+#Discovery#11797_H
+
+and you have into DVB-S "JOJ" and into DVB-T "TV JOJ" then both is saved with channel 
+name "JOJ" with this channel order
+1 - JOJ
+2 - STV3
+3 - JOJ +
+4 - STV4
+100 - Discovery
+100+ - ALL OTHER NOT-scrambled channel from Tvheadend with Alphabetical Order...
+
+
+
+    channels_analogtv.txt
+A#B
+A = channel name
+B = channel frequency
+
+example
+Markiza#189,25
+channel name/alias and order is used from "channels.txt"
+
+
+
+-FIRST backup your Tvheadend configuration
+-for run you need php with sqlite (for xbmc)
