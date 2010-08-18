@@ -51,3 +51,4 @@ if you use XBMC move "MyTV4.db" to folder with XBMC and change owner/group
 
 -FIRST backup your Tvheadend configuration
 -for run you need php with sqlite (for xbmc)
+-after BACKUP and edit config run "run.sh"
