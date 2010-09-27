@@ -155,6 +155,28 @@ xbmc_sqlite($final_channels_sorted_list);
 
 
 
+  // generate list to print...
+  $list_to_print = NULL;
+  for($i=0;$i<(count($final_channels_sorted_list));$i++)
+  {
+
+// now dont work... $list_to_print .= $final_channels_sorted_list[$i]['channel_number'];
+$list_to_print .= ($i+1);
+
+// now dont work... $count_separator = (4+1) - strlen($final_channels_sorted_list[$i]['channel_number']);
+$count_separator = (4+1) - strlen(($i+1));
+
+$list_to_print .=  return_string_x_count($config['list_to_print_separator'],$count_separator);
+$list_to_print .=  ' - ';
+$list_to_print .=  $final_channels_sorted_list[$i]['name'];
+$list_to_print .=  "\n";
+
+  }
+robin_file_write($config['list_to_print_path_filename'],$list_to_print);
+  // END generate list to print...
+
+
+
 /*
 echo '<b>Stats:</b><br>';
 echo ' all: ' . $stats['all_tv_channel'] . '<br>';

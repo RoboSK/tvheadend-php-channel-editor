@@ -1,130 +1,123 @@
-1#JOJ|TV JOJ#Skylink
-2#STV 1|STV1#Skylink
-3#JOJ +|JOJ PLUS#Skylink
-*#STV3#Skylink
-*#STV4#Skylink
-*#STV5#Skylink
-10#TA3#11797_H
-*#STV6#Skylink
-*#STV7#Skylink
-*#STV8#Skylink
-*#STV9#Skylink
-*#STV10#Skylink
-11#TV Barrandov#11797_H
-30#TEST#
-50#CT 1
-51#CT 2
 
+1#STV 1|STV1#Skylink#Skylink_FREE
+2#STV 2|STV2#Skylink#Skylink_FREE
+3#Markiza#Skylink#Skylink_FREE
+4#JOJ|TV JOJ|JOJ TV#Skylink#Skylink_FREE
+5#JOJ +|JOJ PLUS|J@J PLUS#Skylink#Skylink_FREE
+6#TA3|TA 3#Skylink#Skylink_FREE
+7#Doma|DOMA#Skylink#Skylink_FREE
 
+// ---
 
-#NG Wild#Skylink
-#FILMBOX#Skylink
-#kino CS#Skylink
+10#CT 1#CS Link#Skylink_FREE
+11#CT 2#CS Link#Skylink_FREE
+12#CT 24#CS Link#Skylink_FREE
+13#Prima TV#CS Link#Skylink_FREE
+14#Prima COOL#CS Link#Skylink_FREE
+15#Nova#CS Link#Skylink_FREE
+16#Nova Cinema#CS Link#Skylink_FREE
+17#TV Barrandov#Skylink#Skylink_FREE
+18#Z1|Z 1#Skylink#Skylink_FREE
 
+// ---
 
+20#Filmbox|FILMBOX#Skylink#Skylink_MULTI
+21#Filmbox Extra|FILMBOX EXTRA#Skylink#Skylink_MULTI
+22#kino CS#Skylink#Skylink_MULTI
+23#MGM#Skylink#Skylink_MULTI
+24#Film+##UPC_Analog
+25#Hallmark CZ##UPC_Analog
 
----
-_dev_dvb_adapter0_Montage_Technology_DS3000_TS202011797000_H_satconf_2
-      11 797 / H
-      TV Barrandov, Z1, TV JOJ, JOJ Plus, TA3, Discovery, NGC, NGC Wild, Retro Music Television, bebe tv, Viasat Nature
+26#HBO#CS Link#Skylink_EXTRA
+27#Cinemax#CS Link#Skylink_EXTRA
 
+// ---
 
+30#Zone Romantica##UPC_Analog
+31#Zone Reality##UPC_Analog
+32#TVA##UPC_Analog
+33#TV Deko##UPC_Analog
+34#TV Paprika##UPC_Analog
+35#Noe TV#CS Link#Skylink_FREE
 
+// ---
 
+40#National Geographic Wild|NG Wild#Skylink#Skylink_MULTI
+41#National Geographic Channel|NGC#Skylink#Skylink_MULTI
+42#Discovery#Skylink#Skylink_MULTI
+43#Spektrum CZ##UPC_Analog
+44#History#CANALDIGITAAL#Skylink_MULTI
+45#Viasat Nature#Skylink#Skylink_MULTI
+46#Viasat History#Skylink#Skylink_MULTI
+47#Viasat Explorer / Spice#Skylink#Skylink_MULTI
 
+// ---
 
+55#STV 3|STV3#Skylink#Skylink_FREE
+56#CT 4#CS Link#Skylink_FREE
+57#Eurosport|EUROSPORT|Eurosport CZ#CANALDIGITAAL#Skylink_MULTI
+58#Nova Sport#CS Link#Skylink_MULTI
+59#Sport 1#CS Link#Skylink_MULTI
+60#Sport 5#CS Link#Skylink_MULTI
+61#Extreme Sports##UPC_Analog
+62#Fishing and Hunting#CS Link#Skylink_MULTI
 
+// ---
 
-#STV 1|STV1#Skylink
-#STV 2|STV2#Skylink
-#STV 3|STV3#Skylink
+70#TV Patriot##UPC_Analog
+71#LUX TV##UPC_Analog
+72#Info UPC##UPC_Analog
+73#Public TV#CS Link#Skylink_FREE
 
-#Markiza#Skylink
-#Doma|DOMA#Skylink
+// ---
 
-#JOJ|TV JOJ|JOJ TV#Skylink
-#JOJ +|JOJ PLUS|J@J PLUS#Skylink
+80#Ocko TV#SES ASTRA#Skylink_FREE
+81#VH 1##UPC_Analog
+82#Retro Music Television#Skylink#Skylink_MULTI
+83#Music Box SK##UPC_Analog
+84#Minimax / Music##UPC_Analog
+85#MTV Germany##UPC_Analog
+86#MTV CZ#CS Link#Skylink_MULTI
+87#Musiq 1##UPC_Analog
 
-#TA3|TA 3#Skylink
+// ---
 
-#CT 1#CS Link
-#CT 2#CS Link
-#CT 24#CS Link
-#CT HD#CS Link
+90#Deutsche Welle##UPC_Analog
+91#BBC World##UPC_Analog
+92#RUS 1##UPC_Analog
+93#Arirang##UPC_Analog
+94#CNN##UPC_Analog
+95#TV 5 Europe##UPC_Analog
+96#Euronews##UPC_Analog
+97#TV Polonia##UPC_Analog
 
-#Ocko TV#SES ASTRA
-#Z1|Z 1#Skylink
-#Noe TV#CS Link
-#Public TV#CS Link
+// ---
 
-#CT 4#CS Link
+105#Disney Channel#CS Link#Skylink_MULTI
+106#Jim Jam|JIM JAM|JimJam#Skylink#Skylink_MULTI
+107#BeBe TV|bebe tv#Skylink#Skylink_MULTI
 
-#Nova#CS Link
-#Nova Cinema#CS Link
-#Nova HD#Skylink
+// ---
 
-#Prima TV#CS Link
-#Prima COOL#CS Link
+110#Leo TV#Harmonic#Skylink_MULTI
+111#XXX Xtreme#CS Link#Skylink_MULTI
 
-#TV Barrandov#Skylink
+// ---
 
+// 115#PRO 7##UPC_Analog
+115#Pro 7|ProSieben##SAT_FTA
+116#SAT 1|SAT.1##SAT_FTA
+117#3 SAT|3sat##SAT_FTA
+118#RTL|RTL  Television##SAT_FTA
+119#RTL 2|RTL2##SAT_FTA
+120#Super RTL|Super RTL A##SAT_FTA
+121#VOX##SAT_FTA
+122#Tele 5|TELE 5##SAT_FTA
+123#ZDF##SAT_FTA
+// 124 DSF ???
+125#arte##SAT_FTA
 
-// ---MULTI---
-#Eurosport|EUROSPORT|Eurosport CZ#CANALDIGITAAL
-#Nova Sport#CS Link
-#Sport 1#CS Link
-#Sport 5#CS Link
-#Discovery#Skylink
-#History#CANALDIGITAAL
-#National Geographic Channel|NGC#Skylink
-#National Geographic Wild|NG Wild#Skylink
-#Viasat Explorer / Spice#Skylink
-#Viasat History#Skylink
-#Viasat Nature#Skylink
-#Fishing and Hunting#CS Link
-#kino CS#Skylink
-#Filmbox|FILMBOX#Skylink
-#Filmbox Extra|FILMBOX_EXTRA#Skylink
-#MGM#Skylink
-#BeBe TV|bebe tv#Skylink
-#Jim Jam|JIM JAM|JimJam#Skylink
-#Disney Channel#CS Link
-#MTV CZ#CS Link
-#Retro Music Television#Skylink
-#Leo TV#Harmonic
-#XXX Xtreme#CS Link
+// ***
 
-
-
-
-
-
-
-
-// ---AnalogTV---
-#Info UPC
-#TV Patriot
-#Zone Romantica
-#ORT International
-#Arirang
-#Zone Reality
-#VH 1
-#PRO 7
-#Deutsche Welle
-#BBC World
-#Minimax / Music
-#Spektrum CZ
-#Music Box SK
-#TV Polonia
-#Extreme Sports
-#Hallmark CZ
-#CNN
-#TV 5 Europe
-#Euronews
-#TV Paprika
-#Musiq 1
-#MTV Germany
-#TVA
-#Film+
-#TV Deko
-#LUX TV
+// #CT HD#CS Link#Skylink_FREE
+// #Nova HD#Skylink#Skylink_FREE

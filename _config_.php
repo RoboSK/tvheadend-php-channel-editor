@@ -21,6 +21,8 @@ $config['path_xbmc_sqlite'] = $config['path_tvheadend_config_dir_output'] . 'MyT
 
 // EDIT -> 1=use analogTV, 0=NO analogTV
 $config['analog_tv'] = 1;
+// EDIT -> 1=only unique channel, 0=ALL
+$config['analog_tv_only_unique_channel'] = 1;
 
 $config['path_analog_tv_adapters'] = 'v4ladapters/';
 $config['path_analog_tv_services'] = 'v4lservices/';
@@ -28,5 +30,10 @@ $config['path_analog_tv_services'] = 'v4lservices/';
 $config['file_analogtv_channels_list'] = './channels_analogtv.txt';
 
 $config['add_to_rounding'] = 50;
+
+
+
+$config['list_to_print_separator'] = ' ';
+$config['list_to_print_path_filename'] = $config['path_tvheadend_config_dir_output'] . 'channel_list.txt';
 
 ?>

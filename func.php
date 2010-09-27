@@ -712,24 +712,39 @@ $channelname = $channel_name_alias[$tmp_ex[0]];
 $channelname = $tmp_ex[0];
   endif;
 
+      // only unique channel
+      if($config['analog_tv_only_unique_channel'] === 1):
+$tmp_disabled = ($list_all_enabled_channel[$channelname] === 1) ? 1 : 0;
+      else:
+$tmp_disabled = 0;
+      endif;
+
+
+  // temp ("fix" Tvheadend bug) - disabling dont works...
+  if($tmp_disabled === 0):
+
 $output[] = '{
 	"frequency": ' . $frequency . ',
 	"channelname": "' . $channelname . '",
 	"mapped": 1,
 	"pcr": 0,
-	"disabled": 0,
+	"disabled": ' . (int) $tmp_disabled . ',
 	"stream": {
 		"pid": 4294967295,
-		"type": "MPEG2AUDIO"
+		"type": "MPEG2AUDIO",
+		"position": 0
 	},
 	"stream": {
 		"pid": 4294967295,
-		"type": "MPEG2VIDEO"
+		"type": "MPEG2VIDEO",
+		"position": 0
 	}
 }
 ';
 
 $list_all_enabled_channel[$channelname] = 1;
+
+  endif;
 
       }
 
@@ -805,6 +820,29 @@ if($used === 0) return $i;
 
 
 
+
+
+
+
+
+
+
+
+
+
+                function return_string_x_count($string,$count)
+                {
+
+// 19.9.10
+
+  for($i=0;$i<$count;$i++)
+  {
+$out .= $string;
+  }
+
+return $out;
+
+                }
 
 
 

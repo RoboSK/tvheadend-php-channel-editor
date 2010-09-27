@@ -1,4 +1,3 @@
-STV 2#217,25
 CT 1#175,25
 Markiza#189,25
 STV 1#203,25
@@ -7,19 +6,18 @@ TA 3#182,25
 CT 2#224,25
 TV Patriot#154,25
 JOJ TV#161,25
+STV 2#217,25
 Discovery#471,25
 Zone Romantica#479,25
-Sport 1#487,25
-ORT International#495,25
+RUS 1#495,25
 Nova Sport#503,25
 Arirang#511,25
 Zone Reality#535,25
 VH 1#543,25
-PRO 7#559,25
+CT 24#559,25
 Deutsche Welle#575,25
 BBC World#607,25
 Minimax / Music#615,25
-Spektrum CZ#639,25
 Doma#655,25
 Music Box SK#671,25
 TV Polonia#687,25
@@ -30,15 +28,17 @@ Hallmark CZ#783,25
 CNN#799,25
 TV 5 Europe#815,25
 Euronews#663,25
-TV Paprika#847,25
-Musiq 1#252,25
-MTV Germany#266,25
+Musiq 1#631,25
+MTV Germany#551,25
 TVA#280,25
-Film+#519,25
-TV Deko#767,25
-MGM#623,25
 BeBe TV#679,25
 LUX TV#695,25
 JimJam#759,25
 STV 3#711,25
+Sport 1#487,25
+Spektrum CZ#639,25
+TV Paprika#847,25
 J@J PLUS#831,25
+Film+#519,25
+TV Deko#767,25
+MGM#623,25
