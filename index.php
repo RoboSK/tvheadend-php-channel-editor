@@ -151,28 +151,47 @@ echo '</pre>';
 
 $final_channels_sorted_list = sort_channels($list_all_enabled_channel,$channels_sort_list);
 
-xbmc_sqlite($final_channels_sorted_list);
+if($config['use_xbmc'] === 1) xbmc_sqlite($final_channels_sorted_list);
 
 
 
   // generate list to print...
   $list_to_print = NULL;
+  $list_to_print_xbmc = NULL;
   for($i=0;$i<(count($final_channels_sorted_list));$i++)
   {
 
-// now dont work... $list_to_print .= $final_channels_sorted_list[$i]['channel_number'];
-$list_to_print .= ($i+1);
+$list_to_print .= $final_channels_sorted_list[$i]['channel_number'];
 
-// now dont work... $count_separator = (4+1) - strlen($final_channels_sorted_list[$i]['channel_number']);
-$count_separator = (4+1) - strlen(($i+1));
+$count_separator = (4+1) - strlen($final_channels_sorted_list[$i]['channel_number']);
 
 $list_to_print .=  return_string_x_count($config['list_to_print_separator'],$count_separator);
 $list_to_print .=  ' - ';
 $list_to_print .=  $final_channels_sorted_list[$i]['name'];
 $list_to_print .=  "\n";
 
+
+
+          if($config['use_xbmc'] === 1):
+
+    if($config['xbmc_channel_id_one_by_one'] === 1):
+$list_to_print_xbmc .= ($i+1);
+$count_separator_xbmc = (4+1) - strlen(($i+1));
+    else:
+$list_to_print_xbmc .= $final_channels_sorted_list[$i]['channel_number'];
+$count_separator_xbmc = (4+1) - strlen($final_channels_sorted_list[$i]['channel_number']);
+    endif;
+
+$list_to_print_xbmc .=  return_string_x_count($config['list_to_print_separator'],$count_separator_xbmc);
+$list_to_print_xbmc .=  ' - ';
+$list_to_print_xbmc .=  $final_channels_sorted_list[$i]['name'];
+$list_to_print_xbmc .=  "\n";
+
+          endif;
+
   }
 robin_file_write($config['list_to_print_path_filename'],$list_to_print);
+if($config['use_xbmc'] === 1) robin_file_write($config['list_to_print_xbmc_path_filename'],$list_to_print_xbmc);
   // END generate list to print...
 
 

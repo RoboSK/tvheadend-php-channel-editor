@@ -16,7 +16,10 @@ $config['path_tvheadend_config_dir_output'] = $config['path_tvheadend_config_dir
 
 $config['path_tvheadend_channels'] = 'channels/';
 
+$config['use_xbmc'] = 1;
 $config['path_xbmc_sqlite'] = $config['path_tvheadend_config_dir_output'] . 'MyTV4.db';
+$config['xbmc_lastchannel'] = 'STV 1';
+$config['xbmc_channel_id_one_by_one'] = 1;
 
 
 // EDIT -> 1=use analogTV, 0=NO analogTV
@@ -35,5 +38,7 @@ $config['add_to_rounding'] = 50;
 
 $config['list_to_print_separator'] = ' ';
 $config['list_to_print_path_filename'] = $config['path_tvheadend_config_dir_output'] . 'channel_list.txt';
+
+$config['list_to_print_xbmc_path_filename'] = $config['path_tvheadend_config_dir_output'] . 'channel_list_xbmc.txt';
 
 ?>

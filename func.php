@@ -607,13 +607,20 @@ $db->exec('CREATE UNIQUE INDEX ix_GuideData on GuideData(idChannel, StartTime de
 $db->exec('INSERT INTO version VALUES(4,0)');
 $db->exec('INSERT INTO Clients VALUES(1,\'Tvheadend HTSP Client\',\'pvr.hts\')');
 
-// ??? INSERT INTO LastChannel VALUES(1,57,'CT 1');
+
 
     $line_count = count($final_channels_sorted_list);
     for($i=0;$i<$line_count;$i++)
     {
-$final_channels_sorted_list[$i]['name'] = preg_replace('/\'/','\'\'',$final_channels_sorted_list[$i]['name']);
-$db->exec('INSERT INTO Channels VALUES(' . ($i+1) . ',\'' . $final_channels_sorted_list[$i]['name'] . '\',' . (int) $final_channels_sorted_list[$i]['channel_number'] . ',\'' . $final_channels_sorted_list[$i]['name'] . '\',' . ($i+1) . ',1,' . ($i+1) . ',\'\',0,NULL,NULL,NULL,0,0,0,1,\'client\',NULL,0,\'\',\'\')');
+
+$temp_channel_number = ($config['xbmc_channel_id_one_by_one'] === 1) ? ($i+1) : $final_channels_sorted_list[$i]['channel_number'];
+$channel_name_for_sql = preg_replace('/\'/','\'\'',$final_channels_sorted_list[$i]['name']);
+
+$db->exec('INSERT INTO Channels VALUES(' . ($i+1) . ',\'' . $channel_name_for_sql . '\',' . (int) $temp_channel_number . ',\'' . $channel_name_for_sql . '\',' . ($i+1) . ',1,' . ($i+1) . ',\'\',0,NULL,NULL,NULL,0,0,0,1,\'client\',NULL,0,\'\',\'\')');
+
+  if(isset($config['xbmc_lastchannel']) && $final_channels_sorted_list[$i]['name'] == $config['xbmc_lastchannel']):
+$db->exec('INSERT INTO LastChannel VALUES(1,' . (int) $temp_channel_number . ',\'' . $channel_name_for_sql . '\')');
+  endif;
     }
 
                       }
