@@ -386,6 +386,7 @@ robin_file_write($config['path_tvheadend_config_dir_output'] . $config['path_tvh
 // 20.07.10
 
 global $config;
+global $config_tv_logo;
 
 /*
 >0   = ID
@@ -541,8 +542,17 @@ $dir_list_array = list_files_into_dir($temp['tvheadend_channels_dir']);
     for($i=0;$i<$line_count;$i++)
     {
 
+        // TV Logo
+        if($config['tv_logo'] === 1):
+  if(isset($config_tv_logo[$final_channels_sorted_list[$i]['name']])):
+$temp_tv_logo = "\n" . '	"icon": "' . $config['path_tv_logo_-_tvheadend'] . $config_tv_logo[$final_channels_sorted_list[$i]['name']] . '",';
+  else:
+$temp_tv_logo = NULL;
+  endif;
+        endif;
+
 $output = '{
-	"name": "' . $final_channels_sorted_list[$i]['name'] . '",
+	"name": "' . $final_channels_sorted_list[$i]['name'] . '",' . $temp_tv_logo . '
 	"tags": [
 	],
 	"dvr_extra_time_pre": 0,
@@ -583,6 +593,7 @@ return $final_channels_sorted_list;
 // 20.07.10
 
 global $config;
+global $config_tv_logo;
 
 $file = $config['path_xbmc_sqlite'];
 
@@ -613,10 +624,21 @@ $db->exec('INSERT INTO Clients VALUES(1,\'Tvheadend HTSP Client\',\'pvr.hts\')')
     for($i=0;$i<$line_count;$i++)
     {
 
+        // TV Logo
+        if($config['tv_logo'] === 1):
+  if(isset($config_tv_logo[$final_channels_sorted_list[$i]['name']])):
+$temp_tv_logo = '\'' . $config['path_tv_logo_-_xbmc'] . $config_tv_logo[$final_channels_sorted_list[$i]['name']] . '\'';
+  else:
+$temp_tv_logo = '\'\'';
+  endif;
+        else:
+$temp_tv_logo = '\'\'';
+        endif;
+
 $temp_channel_number = ($config['xbmc_channel_id_one_by_one'] === 1) ? ($i+1) : $final_channels_sorted_list[$i]['channel_number'];
 $channel_name_for_sql = preg_replace('/\'/','\'\'',$final_channels_sorted_list[$i]['name']);
 
-$db->exec('INSERT INTO Channels VALUES(' . ($i+1) . ',\'' . $channel_name_for_sql . '\',' . (int) $temp_channel_number . ',\'' . $channel_name_for_sql . '\',' . ($i+1) . ',1,' . ($i+1) . ',\'\',0,NULL,NULL,NULL,0,0,0,1,\'client\',NULL,0,\'\',\'\')');
+$db->exec('INSERT INTO Channels VALUES(' . ($i+1) . ',\'' . $channel_name_for_sql . '\',' . (int) $temp_channel_number . ',\'' . $channel_name_for_sql . '\',' . ($i+1) . ',1,' . ($i+1) . ',' . $temp_tv_logo . ',0,NULL,NULL,NULL,0,0,0,1,\'client\',NULL,0,\'\',\'\')');
 
   if(isset($config['xbmc_lastchannel']) && $final_channels_sorted_list[$i]['name'] == $config['xbmc_lastchannel']):
 $db->exec('INSERT INTO LastChannel VALUES(1,' . (int) $temp_channel_number . ',\'' . $channel_name_for_sql . '\')');

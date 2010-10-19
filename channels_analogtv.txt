@@ -24,7 +24,7 @@ TV Polonia#687,25
 Eurosport#703,25
 Extreme Sports#735,25
 Disney Channel#751,25
-Hallmark CZ#783,25
+Universal Channel#783,25
 CNN#799,25
 TV 5 Europe#815,25
 Euronews#663,25

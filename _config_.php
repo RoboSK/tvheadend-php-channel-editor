@@ -36,6 +36,12 @@ $config['add_to_rounding'] = 50;
 
 
 
+// Logo
+$config['tv_logo'] = 1;
+if($config['tv_logo'] === 1) include('_config_tv_logo_.php');
+
+
+
 $config['list_to_print_separator'] = ' ';
 $config['list_to_print_path_filename'] = $config['path_tvheadend_config_dir_output'] . 'channel_list.txt';
 

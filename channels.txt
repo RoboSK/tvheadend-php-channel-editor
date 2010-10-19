@@ -18,15 +18,16 @@
 16#Nova Cinema#CS Link#Skylink_FREE
 17#TV Barrandov#Skylink#Skylink_FREE
 18#Z1|Z 1#Skylink#Skylink_FREE
+19#Public TV#CS Link#Skylink_FREE
 
 // ---
 
 20#Filmbox|FILMBOX#Skylink#Skylink_MULTI
 21#Filmbox Extra|FILMBOX EXTRA#Skylink#Skylink_MULTI
-22#kino CS#Skylink#Skylink_MULTI
+// ---TEMP--- 22#CS Film / CS Mini|CSFilm/CSMini#cs link#Skylink_MULTI
 23#MGM#Skylink#Skylink_MULTI
 24#Film+##UPC_Analog
-25#Hallmark CZ##UPC_Analog
+25#Universal Channel##UPC_Analog
 
 26#HBO#CS Link#Skylink_EXTRA
 27#Cinemax#CS Link#Skylink_EXTRA
@@ -44,10 +45,10 @@
 
 40#National Geographic Wild|NG Wild#Skylink#Skylink_MULTI
 41#National Geographic Channel|NGC#Skylink#Skylink_MULTI
-42#Discovery#Skylink#Skylink_MULTI
-43#Spektrum CZ##UPC_Analog
-44#History#CANALDIGITAAL#Skylink_MULTI
-45#Viasat Nature#Skylink#Skylink_MULTI
+42#Viasat Nature#Skylink#Skylink_MULTI
+43#Discovery#Skylink#Skylink_MULTI
+44#Spektrum CZ##UPC_Analog
+45#History#CANALDIGITAAL#Skylink_MULTI
 46#Viasat History#Skylink#Skylink_MULTI
 47#Viasat Explorer / Spice#Skylink#Skylink_MULTI
 
@@ -67,7 +68,6 @@
 70#TV Patriot##UPC_Analog
 71#LUX TV##UPC_Analog
 72#Info UPC##UPC_Analog
-73#Public TV#CS Link#Skylink_FREE
 
 // ---
 
@@ -99,8 +99,8 @@
 
 // ---
 
-110#Leo TV#Harmonic#Skylink_MULTI
-111#XXX Xtreme#CS Link#Skylink_MULTI
+110#Leo TV#CS Link#Skylink_MULTI
+111#Daring!TV|Daring!TV (0.00-6.00)#CS Link#Skylink_MULTI
 
 // ---
 
