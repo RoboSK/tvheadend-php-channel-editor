@@ -24,13 +24,10 @@
 
 20#Filmbox|FILMBOX#Skylink#Skylink_MULTI
 21#Filmbox Extra|FILMBOX EXTRA#Skylink#Skylink_MULTI
-// ---TEMP--- 22#CS Film / CS Mini|CSFilm/CSMini#cs link#Skylink_MULTI
+22#CS Film / CS Mini|CSFilm/CSMini#cs link#Skylink_MULTI
 23#MGM#Skylink#Skylink_MULTI
 24#Film+##UPC_Analog
 25#Universal Channel##UPC_Analog
-
-26#HBO#CS Link#Skylink_EXTRA
-27#Cinemax#CS Link#Skylink_EXTRA
 
 // ---
 
@@ -57,11 +54,12 @@
 55#STV 3|STV3#Skylink#Skylink_FREE
 56#CT 4#CS Link#Skylink_FREE
 57#Eurosport|EUROSPORT|Eurosport CZ#CANALDIGITAAL#Skylink_MULTI
-58#Nova Sport#CS Link#Skylink_MULTI
-59#Sport 1#CS Link#Skylink_MULTI
-60#Sport 5#CS Link#Skylink_MULTI
-61#Extreme Sports##UPC_Analog
-62#Fishing and Hunting#CS Link#Skylink_MULTI
+58#Eurosport 2|Eurosport2#CS Link#Skylink_MULTI
+59#Nova Sport#CS Link#Skylink_MULTI
+60#Sport 1#CS Link#Skylink_MULTI
+61#Sport 5#CS Link#Skylink_MULTI
+62#Extreme Sports##UPC_Analog
+63#Fishing and Hunting#CS Link#Skylink_MULTI
 
 // ---
 
@@ -118,7 +116,34 @@
 125#arte##SAT_FTA
 126#Montagne TV##SAT_FTA
 
+// ---
+
+135#HSE24##SAT_FTA
+136#HSE24 EXTRA##SAT_FTA
+137#Channel 21##SAT_FTA
+138#Beauty TV##SAT_FTA
+139#RNF##SAT_FTA
+140#A LA DEMANDE##SAT_FTA
+141#MTV AUSTRIA##SAT_FTA
+
+
+
 // ***
 
 // #CT HD#CS Link#Skylink_FREE
 // #Nova HD#Skylink#Skylink_FREE
+
+// 140#Empatia#Skylink#Skylink_FREE
+
+
+
+// ---
+
+150#HBO#CS Link#Skylink_EXTRA
+151#Cinemax#CS Link#Skylink_EXTRA
+
+// ---
+
+155#Kino CS#Skylink#Skylink_CSTV
+156#Doku CS#Skylink#Skylink_CSTV
+157#Muzika CS#Skylink#Skylink_CSTV

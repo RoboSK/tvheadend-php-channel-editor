@@ -151,7 +151,10 @@ echo '</pre>';
 
 $final_channels_sorted_list = sort_channels($list_all_enabled_channel,$channels_sort_list);
 
-if($config['use_xbmc'] === 1) xbmc_sqlite($final_channels_sorted_list);
+    if($config['use_xbmc'] === 1):
+if ($config['xbmc_db_version'] === 4) xbmc_sqlite($final_channels_sorted_list);
+if ($config['xbmc_db_version'] === 6) xbmc_sqlite_v6($final_channels_sorted_list);
+    endif;
 
 
 

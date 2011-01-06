@@ -67,6 +67,11 @@ $config_tv_logo = array (
     'MTV CZ'             => 'mtv_cz.jpg',
     'Musiq 1'            => 'musiq1.jpg',
     'Montagne TV'        => 'montagne_tv.jpg',
+    'Kino CS'            => 'kino_cs.jpg',
+    'Doku CS'            => 'doku_cs.jpg',
+    'Muzika CS'          => 'muzika_cs.jpg',
+    'Eurosport 2'        => 'eurosport2_ne.jpg',
+
     'CT HD'              => NULL,
     'Nova HD'            => NULL
 );

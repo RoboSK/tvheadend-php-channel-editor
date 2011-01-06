@@ -591,6 +591,7 @@ return $final_channels_sorted_list;
                       {
 
 // 20.07.10
+// DB Version 4
 
 global $config;
 global $config_tv_logo;
@@ -646,6 +647,108 @@ $db->exec('INSERT INTO LastChannel VALUES(1,' . (int) $temp_channel_number . ',\
     }
 
                       }
+
+
+
+
+
+
+
+
+
+
+
+
+                      function xbmc_sqlite_v6($final_channels_sorted_list)
+                      {
+
+// 5.1.11
+// DB Version 6
+
+global $config;
+global $config_tv_logo;
+
+$file = $config['path_xbmc_sqlite'];
+
+@unlink($file);
+
+
+$db = new SQLite3($file);
+
+$db->exec('CREATE TABLE ChannelGroup (GroupId   integer primary key,IsRadio   bool, Name      text,SortOrder integer)');
+$db->exec('CREATE TABLE ChannelSettings (ChannelId           integer primary key, InterlaceMethod     integer, ViewMode            integer, CustomZoomAmount    float, PixelRatio          float, AudioStream         integer, SubtitleStream      integer,SubtitleDelay       float, SubtitlesOn         bool, Brightness          float, Contrast            float, Gamma               float,VolumeAmplification float, AudioDelay          float, OutputToAllSpeakers bool, Crop                bool, CropLeft            integer, CropRight           integer, CropTop             integer, CropBottom          integer, Sharpness           float, NoiseReduction      float)');
+$db->exec('CREATE TABLE Channels (ChannelId           integer primary key, UniqueId            integer, ChannelNumber       integer, GroupId             integer, IsRadio             bool, IsHidden            bool, IconPath            text, ChannelName         text, IsVirtual           bool, EPGEnabled          bool, EPGScraper          text, ClientId            integer, ClientChannelNumber integer, InputFormat         text, StreamURL           text, EncryptionSystem    integer)');
+$db->exec('CREATE TABLE Clients (ClientDbId integer primary key, Name       text, ClientId   text)');
+$db->exec('CREATE TABLE EpgData (BroadcastId integer primary key, BroadcastUid integer, ChannelId integer, Title text, PlotOutline text, Plot text, StartTime datetime, EndTime datetime, GenreType integer, GenreSubType integer, FirstAired datetime, ParentalRating integer, StarRating integer, Notify bool, SeriesId text, EpisodeId text, EpisodePart text, EpisodeName text)');
+$db->exec('CREATE TABLE LastChannel (ChannelId integer primary key, Number    integer, Name      text)');
+$db->exec('CREATE TABLE LastEPGScan (idScan integer primary key, ScanTime datetime)');
+$db->exec('CREATE TABLE version (idVersion integer, iCompressCount integer)');
+$db->exec('CREATE INDEX ix_ChannelClientId on Channels(ClientId)');
+$db->exec('CREATE INDEX ix_ChannelGroupIsRadio on ChannelGroup(IsRadio)');
+$db->exec('CREATE INDEX ix_ChannelGroupName on ChannelGroup(Name)');
+$db->exec('CREATE INDEX ix_ChannelIsHidden on Channels(IsHidden)');
+$db->exec('CREATE INDEX ix_ChannelIsRadio on Channels(IsRadio)');
+$db->exec('CREATE INDEX ix_ChannelNumber on Channels(ChannelNumber)');
+$db->exec('CREATE INDEX ix_ClientId on Clients(ClientId)');
+$db->exec('CREATE UNIQUE INDEX ix_EpgBroadcastUid on EpgData(BroadcastUid)');
+$db->exec('CREATE INDEX ix_EpgChannelId on EpgData(ChannelId)');
+$db->exec('CREATE INDEX ix_EpgEndTime on EpgData(EndTime)');
+$db->exec('CREATE INDEX ix_EpgStartTime on EpgData(StartTime)');
+$db->exec('CREATE UNIQUE INDEX ix_EpgUniqueStartTime on EpgData(ChannelId, StartTime desc)');
+$db->exec('CREATE UNIQUE INDEX ix_UniqueChannelNumber on Channels(ChannelNumber, IsRadio)');
+
+$db->exec('INSERT INTO version VALUES(6,0)');
+$db->exec('INSERT INTO Clients VALUES(1,\'Tvheadend HTSP Client\',\'pvr.hts\')');
+
+$lastepgscan = date('Y-m-d H:i:s',mktime()-(60*60*48));
+$db->exec('INSERT INTO LastEPGScan VALUES(1,\'' . $lastepgscan . '\')');
+
+
+
+    $line_count = count($final_channels_sorted_list);
+    for($i=0;$i<$line_count;$i++)
+    {
+
+        // TV Logo
+        if($config['tv_logo'] === 1):
+  if(isset($config_tv_logo[$final_channels_sorted_list[$i]['name']])):
+$temp_tv_logo = '\'' . $config['path_tv_logo_-_xbmc'] . $config_tv_logo[$final_channels_sorted_list[$i]['name']] . '\'';
+  else:
+$temp_tv_logo = '\'\'';
+  endif;
+        else:
+$temp_tv_logo = '\'\'';
+        endif;
+
+$temp_channel_number = ($config['xbmc_channel_id_one_by_one'] === 1) ? ($i+1) : $final_channels_sorted_list[$i]['channel_number'];
+$channel_name_for_sql = preg_replace('/\'/','\'\'',$final_channels_sorted_list[$i]['name']);
+
+$db->exec('INSERT INTO Channels VALUES(
+' . ($i+1) . ',
+' . ($i+1) . ',
+' . (int) $temp_channel_number . ',
+0,
+0,
+0,
+' . $temp_tv_logo . ',
+\'' . $channel_name_for_sql . '\',
+0,
+1,
+\'client\',
+1,
+' . ($i+1) . ',
+\'\',
+\'\',
+0)');
+
+  if(isset($config['xbmc_lastchannel']) && $final_channels_sorted_list[$i]['name'] == $config['xbmc_lastchannel']):
+$db->exec('INSERT INTO LastChannel VALUES(1,' . (int) $temp_channel_number . ',\'' . $channel_name_for_sql . '\')');
+  endif;
+    }
+
+                      }
+
+
 
 
 
