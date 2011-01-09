@@ -20,7 +20,7 @@ $config['use_xbmc'] = 1;
 $config['path_xbmc_sqlite'] = $config['path_tvheadend_config_dir_output'] . 'MyTV4.db';
 $config['xbmc_lastchannel'] = 'STV 1';
 $config['xbmc_channel_id_one_by_one'] = 1;
-$config['xbmc_db_version'] = 6;
+$config['xbmc_db_version'] = 7;
 
 
 // EDIT -> 1=use analogTV, 0=NO analogTV
