@@ -1,30 +1,33 @@
 
-1#STV 1|STV1#Skylink#Skylink_FREE
-2#STV 2|STV2#Skylink#Skylink_FREE
-3#Markiza#Skylink#Skylink_FREE
-4#JOJ|TV JOJ|JOJ TV#Skylink#Skylink_FREE
-5#JOJ +|JOJ PLUS|J@J PLUS#Skylink#Skylink_FREE
-6#TA3|TA 3#Skylink#Skylink_FREE
-7#Doma|DOMA#Skylink#Skylink_FREE
+1#STV 1|STV1#Towercom#Skylink_FREE
+2#STV 2|STV2#Towercom#Skylink_FREE
+3#Markiza#Towercom#Skylink_FREE
+4#JOJ|TV JOJ|JOJ TV#Towercom#Skylink_FREE
+5#JOJ +|JOJ PLUS|J@J PLUS#Towercom#Skylink_FREE
+6#TA3|TA 3#Towercom#Skylink_FREE
+7#Doma|DOMA#Towercom#Skylink_FREE
 
 // ---
 
-10#CT 1#CS Link#Skylink_FREE
-11#CT 2#CS Link#Skylink_FREE
-12#CT 24#CS Link#Skylink_FREE
-13#Prima TV#CS Link#Skylink_FREE
-14#Prima COOL#CS Link#Skylink_FREE
-15#Nova#CS Link#Skylink_FREE
-16#Nova Cinema#CS Link#Skylink_FREE
-17#TV Barrandov#Skylink#Skylink_FREE
-18#Z1|Z 1#Skylink#Skylink_FREE
-19#Public TV#CS Link#Skylink_FREE
+10#CT 1#Skylink#Skylink_FREE
+11#CT 2|CT2#Skylink#Skylink_FREE
+12#CT 24#Skylink#Skylink_FREE
+13#Prima TV|Prima family#Skylink#Skylink_FREE
+14#Prima COOL#Skylink#Skylink_FREE
+15#Prima LOVE|Prima Love#Skylink#Skylink_FREE
+16#Nova#Skylink#Skylink_FREE
+// 16#Nova#12070_H#CSLink_FREE
+17#Nova Cinema#Skylink#Skylink_FREE
+18#TV Barrandov#11895_V#Skylink_FREE
+// 18#Z1|Z 1#Skylink#Skylink_FREE
+// 18#TV 8|TEST_TV8#skylink#Skylink_FREE
+// 19#Public TV#Skylink#Skylink_FREE
 
 // ---
 
 20#Filmbox|FILMBOX#Skylink#Skylink_MULTI
-21#Filmbox Extra|FILMBOX EXTRA#Skylink#Skylink_MULTI
-22#CS Film / CS Mini|CSFilm/CSMini#cs link#Skylink_MULTI
+21#Filmbox Plus#Skylink#Skylink_MULTI
+22#CS Film / CS Mini|CSFilm/CSMini#Skylink#Skylink_MULTI
 23#MGM#Skylink#Skylink_MULTI
 24#Film+##UPC_Analog
 25#Universal Channel##UPC_Analog
@@ -33,10 +36,12 @@
 
 30#Zone Romantica##UPC_Analog
 31#Zone Reality##UPC_Analog
-32#TVA##UPC_Analog
+32#TV8|tv8#Skylink#Skylink_FREE
 33#TV Deko##UPC_Analog
 34#TV Paprika##UPC_Analog
-35#Noe TV#CS Link#Skylink_FREE
+35#Fashion TV#Skylink#Skylink_FREE
+36#Noe TV#Skylink#Skylink_FREE
+37#CETV#Skylink#Skylink_FREE
 
 // ---
 
@@ -45,25 +50,26 @@
 42#Viasat Nature#Skylink#Skylink_MULTI
 43#Discovery#Skylink#Skylink_MULTI
 44#Spektrum CZ##UPC_Analog
-45#History#CANALDIGITAAL#Skylink_MULTI
+45#History channel#skylink#Skylink_MULTI
 46#Viasat History#Skylink#Skylink_MULTI
-47#Viasat Explorer / Spice#Skylink#Skylink_MULTI
+47#Viasat Explorer / Spice|Viasat Explorer/Spice#Skylink#Skylink_MULTI
 
 // ---
 
-55#STV 3|STV3#Skylink#Skylink_FREE
-56#CT 4#CS Link#Skylink_FREE
-57#Eurosport|EUROSPORT|Eurosport CZ#CANALDIGITAAL#Skylink_MULTI
-58#Eurosport 2|Eurosport2#CS Link#Skylink_MULTI
-59#Nova Sport#CS Link#Skylink_MULTI
-60#Sport 1#CS Link#Skylink_MULTI
-61#Sport 5#CS Link#Skylink_MULTI
+// 55#STV 3|STV3#Skylink#Skylink_FREE
+56#CT 4#Skylink#Skylink_FREE
+// TEMP - Diseqc --- 57#Eurosport|EUROSPORT|Eurosport CZ#CANALDIGITAAL#Skylink_MULTI
+57#Eurosport|EUROSPORT|EUROSPORT CZ#CANALDIGITAAL#Skylink_MULTI
+58#Eurosport 2|Eurosport2#Skylink#Skylink_MULTI
+59#Nova Sport#MEDIA BROADCAST#Skylink_MULTI
+60#Sport 1#Skylink#Skylink_MULTI
+61#Sport 5#Skylink#Skylink_MULTI
 62#Extreme Sports##UPC_Analog
-63#Fishing and Hunting#CS Link#Skylink_MULTI
+63#Fishing and Hunting#Skylink#Skylink_MULTI
 
 // ---
 
-70#TV Patriot##UPC_Analog
+70#TV Patriot#Towercom#Skylink_FREE
 71#LUX TV##UPC_Analog
 72#Info UPC##UPC_Analog
 
@@ -71,11 +77,11 @@
 
 80#Ocko TV#SES ASTRA#Skylink_FREE
 81#VH 1##UPC_Analog
-82#Retro Music Television#Skylink#Skylink_MULTI
+82#Retro Music Television#11895_V#Skylink_MULTI
 83#Music Box SK##UPC_Analog
 84#Minimax / Music##UPC_Analog
 85#MTV Germany##UPC_Analog
-86#MTV CZ#CS Link#Skylink_MULTI
+86#MTV CZ#Skylink#Skylink_MULTI
 87#Musiq 1##UPC_Analog
 
 // ---
@@ -91,14 +97,14 @@
 
 // ---
 
-105#Disney Channel#CS Link#Skylink_MULTI
+105#Disney Channel#Skylink#Skylink_MULTI
 106#Jim Jam|JIM JAM|JimJam#Skylink#Skylink_MULTI
 107#BeBe TV|bebe tv#Skylink#Skylink_MULTI
 
 // ---
 
-110#Leo TV#CS Link#Skylink_MULTI
-111#Daring!TV|Daring!TV (0.00-6.00)#CS Link#Skylink_MULTI
+110#Leo TV#Skylink#Skylink_MULTI
+111#Daring!TV|Daring!TV (0.00-6.00)#Skylink#Skylink_MULTI
 
 // ---
 
@@ -108,13 +114,13 @@
 117#3 SAT|3sat##SAT_FTA
 118#RTL|RTL  Television##SAT_FTA
 119#RTL 2|RTL2##SAT_FTA
-120#Super RTL|Super RTL A##SAT_FTA
+120#Super RTL|SUPER RTL A##SAT_FTA
 121#VOX##SAT_FTA
 122#Tele 5|TELE 5##SAT_FTA
 123#ZDF##SAT_FTA
 // 124 DSF ???
-125#arte##SAT_FTA
-126#Montagne TV##SAT_FTA
+124#arte##SAT_FTA
+125#Montagne TV##SAT_FTA
 
 // ---
 
@@ -124,14 +130,11 @@
 138#Beauty TV##SAT_FTA
 139#RNF##SAT_FTA
 140#A LA DEMANDE##SAT_FTA
-141#MTV AUSTRIA##SAT_FTA
+// 141#MTV AUSTRIA##SAT_FTA
 
 
 
 // ***
-
-// #CT HD#CS Link#Skylink_FREE
-// #Nova HD#Skylink#Skylink_FREE
 
 // 140#Empatia#Skylink#Skylink_FREE
 
@@ -139,11 +142,52 @@
 
 // ---
 
-150#HBO#CS Link#Skylink_EXTRA
-151#Cinemax#CS Link#Skylink_EXTRA
+// 150#HBO#Skylink#Skylink_EXTRA
+// 151#Cinemax#Skylink#Skylink_EXTRA
 
 // ---
 
-155#Kino CS#Skylink#Skylink_CSTV
-156#Doku CS#Skylink#Skylink_CSTV
-157#Muzika CS#Skylink#Skylink_CSTV
+// 155#Kino CS#Skylink#Skylink_CSTV
+// 156#Doku CS#Skylink#Skylink_CSTV
+// 157#Muzika CS#Skylink#Skylink_CSTV
+
+
+
+// --- ORF & AustriaSat
+// *#ORF1#ORF#ORF_AustriaSat
+// *#ORF2#ORF#ORF_AustriaSat
+
+// *#ORF1 HD#ORF#ORF_AustriaSat
+// *#ORF2 HD#ORF#ORF_AustriaSat
+
+// *#PULS 4 Austria#ProSiebenSat.1#ORF_AustriaSat
+// *#AUSTRIA 9 TV#AUSTRIA 9 TV#ORF_AustriaSat
+// *#ATV#ATV+#ORF_AustriaSat
+
+// *#Kabel Eins classics|kabel eins classics#ProSiebenSat.1#ORF_AustriaSat
+// *#Sat.1 Comedy#ProSiebenSat.1#ORF_AustriaSat
+
+// *#RTL Living#RTL#ORF_AustriaSat
+
+// *#AXN Action|AXN  Action#SKY#ORF_AustriaSat
+
+// *#Alpenglühen TVX|Alpen glĂžhen  TVX#BetaDigital#ORF_AustriaSat
+
+// *#Sportdigital TV|sportdigital#SKY#ORF_AustriaSat
+
+// *#Animax#CANALDIGITAAL#ORF_AustriaSat
+
+// *#VH-1 Europe|VH1#MTV Networks Europe#ORF_AustriaSat
+// *#MTV Music#MTV Networks Europe#ORF_AustriaSat
+// *#MTV Hits#MTV Networks Europe#ORF_AustriaSat
+// *#MTV Dance#MTV Networks Europe#ORF_AustriaSat
+// *#MTV Rocks|MTV ROCKS#MTV Networks Europe#ORF_AustriaSat
+
+
+
+
+// #Markiza HD#Skylink#Skylink_FREE
+#Nova HD#Skylink#Skylink_FREE
+#Prima HD|Prima family HD#Skylink#CSLink_FREE
+#CT HD#media broadcast#Skylink_FREE
+

@@ -30,7 +30,6 @@ TV 5 Europe#815,25
 Euronews#663,25
 Musiq 1#631,25
 MTV Germany#551,25
-TVA#280,25
 BeBe TV#679,25
 LUX TV#695,25
 JimJam#759,25
